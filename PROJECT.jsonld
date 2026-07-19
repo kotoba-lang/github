@@ -1,0 +1,58 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "SoftwareApplication",
+  "@id": "urn:etzhayyim:project:etzhayyim-project-github",
+  "name": "etzhayyim-project-github",
+  "description": "GitHub integration service — git-backed state store, GitHub App auth, PR proposals, issue creation, webhook handler, and scheduled git operations via legacy runtime",
+  "applicationCategory": "etzhayyim-project-platform",
+  "operatingSystem": "Kubernetes",
+  "softwareRequirements": [
+    "legacy runtime",
+    "KEDA",
+    "GitHub App (etzhayyim-gitops-builder)"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Etzhayyim",
+    "url": "https://etzhayyim.com"
+  },
+  "codeRepository": "https://github.com/etzhayyim/etzhayyim-root",
+  "programmingLanguage": "Go",
+  "rdfUnifiedDocuments": {
+    "@type": "Dataset",
+    "name": "Unified top-level RDF/JSON-LD documents",
+    "description": "Consolidated from project top-level *.jsonld files except PROJECT.jsonld.",
+    "documents": [
+      {
+        "fileName": "scheduler.jsonld",
+        "content": {
+          "@context": [
+            "https://schema.org/",
+            {
+              "etzhayyim": "https://etzhayyim.com/schemas/",
+              "capabilities": "etzhayyim:capabilities",
+              "survivalIndicators": "etzhayyim:survivalIndicators",
+              "scheduler": "etzhayyim:scheduler",
+              "milestones": "etzhayyim:milestones",
+              "blockers": "etzhayyim:blockers",
+              "dependsOn": {
+                "@id": "etzhayyim:dependsOn",
+                "@type": "@id"
+              },
+              "ingestKey": "etzhayyim:ingestKey",
+              "window": "etzhayyim:window",
+              "valueUpdatedAt": "etzhayyim:valueUpdatedAt"
+            }
+          ],
+          "@type": "CreativeWork",
+          "name": "etzhayyim-project-github Scheduler",
+          "identifier": "etzhayyim-project-github/scheduler",
+          "description": "Project schedule (milestones) and blockers.",
+          "dateCreated": "2026-02-15T04:25:26+00:00",
+          "milestones": [],
+          "blockers": []
+        }
+      }
+    ]
+  }
+}
